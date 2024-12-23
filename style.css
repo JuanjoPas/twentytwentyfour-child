@@ -7,3 +7,114 @@
  Template: twentytwentyfour
  Version: 1.0.0
 */
+
+/* Estilo general para formularios y fieldsets */
+form, fieldset {
+    border: none;
+    margin: 0 0 20px;
+    padding: 0;
+    font-family: inherit; /* Heredar la fuente del tema */
+    color: inherit; /* Heredar color del texto del tema */
+}
+
+/* Estilo del encabezado de fieldsets */
+fieldset legend {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111111; /* Ébano */
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Estilo de los campos de entrada y áreas de texto */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e4b44b; /* Oro cálido */
+    border-radius: 5px;
+    background-color: #f9f8ec; /* Beige suave */
+    font-size: 16px;
+    color: #111111; /* Ébano */
+    box-sizing: border-box;
+}
+
+textarea {
+    height: auto; /* Permite que el área de texto crezca con el contenido */
+    min-height: 40px; /* Asegura una altura mínima uniforme */
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #f39e1c; /* Naranja brillante */
+    box-shadow: 0 0 5px rgba(243, 158, 28, 0.5);
+}
+
+/* Selectores desplegables */
+select {
+    width: 100%;
+    max-width: 500px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e4b44b; /* Oro cálido */
+    border-radius: 5px;
+    background-color: #f9f8ec; /* Beige suave */
+    font-size: 16px;
+    color: #111111; /* Ébano */
+    appearance: none; /* Elimina el estilo por defecto del navegador */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%23111111' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px 6px;
+}
+
+select:focus {
+    outline: none;
+    border-color: #f39e1c; /* Naranja brillante */
+    box-shadow: 0 0 5px rgba(243, 158, 28, 0.5);
+}
+
+/* Botones de envío */
+button, input[type="submit"] {
+    background-color: #e4b44b; /* Oro cálido */
+    color: #ffffff; /* Blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #f39e1c; /* Naranja brillante */
+}
+
+/* Estilo de las etiquetas */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #111111; /* Ébano */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Mensajes de error y validación */
+input:invalid, select:invalid, textarea:invalid {
+    border-color: #f39e1c; /* Naranja brillante */
+}
+
+/* Ajustes para texto descriptivo (opcional) */
+.description {
+    font-size: 16px;
+    color: #636363; /* Gris oscuro */
+    margin-top: -10px;
+    margin-bottom: 15px;
+}

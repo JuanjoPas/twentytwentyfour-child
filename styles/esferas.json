@@ -3,7 +3,11 @@
 	"version": 2,
 	"title": "Esferas",
 	"settings": {
+		"appearanceTools": true,
 		"color": {
+			"defaultDuotone": false,
+			"defaultPalette": false,
+			"defaultGradients": false,
 			"duotone": [
 				{
 					"colors": [
@@ -16,97 +20,80 @@
 				{
 					"colors": [
 						"#111111",
-						"#C2A990"
+						"#e4b44b"
 					],
 					"slug": "duotone-2",
-					"name": "Black and sandstone"
+					"name": "Black and Dorado Oscuro"
 				},
 				{
 					"colors": [
 						"#111111",
-						"#D8613C"
+						"#f39e1c"
 					],
 					"slug": "duotone-3",
-					"name": "Black and rust"
+					"name": "Negro y Naranja Brillante"
 				},
 				{
 					"colors": [
 						"#111111",
-						"#B1C5A4"
+						"#fdf3e3"
 					],
 					"slug": "duotone-4",
-					"name": "Black and sage"
-				},
-				{
-					"colors": [
-						"#111111",
-						"#B5BDBC"
-					],
-					"slug": "duotone-5",
-					"name": "Black and pastel blue"
+					"name": "Negro y beige"
 				}
 			],
 			"gradients": [
 				{
 					"slug": "gradient-1",
-					"gradient": "linear-gradient(to bottom, #f6decd 0%, #dbab88 100%)",
-					"name": "Vertical linen to beige"
+					"gradient": "linear-gradient(to bottom, #e4b44b 0%, #ffffff 100%)",
+					"name": "Oro cálido a blanco"
 				},
 				{
 					"slug": "gradient-2",
-					"gradient": "linear-gradient(to bottom, #A4A4A4 0%, #dbab88 100%)",
-					"name": "Vertical taupe to beige"
+					"gradient": "linear-gradient(to bottom, #ffffff 0%, #e4b44b 100%)",
+					"name": "Blanco a Oro cálido"
 				},
 				{
 					"slug": "gradient-3",
-					"gradient": "linear-gradient(to bottom, #353535 0%, #dbab88 100%)",
-					"name": "Vertical sable to beige"
+					"gradient": "linear-gradient(to bottom, #e4b44b 0%, #111111 100%)",
+					"name": "Oro cálido a ébano"
 				},
 				{
 					"slug": "gradient-4",
-					"gradient": "linear-gradient(to bottom, #111111 0%, #dbab88 100%)",
-					"name": "Vertical ebony to beige"
+					"gradient": "linear-gradient(to bottom, #f39e1c 0%, #ffffff 100%)",
+					"name": "Naranja brillante a blanco"
 				},
 				{
 					"slug": "gradient-5",
-					"gradient": "linear-gradient(to bottom, #353535 0%, #A4A4A4 100%)",
-					"name": "Vertical sable to beige"
+					"gradient": "linear-gradient(to bottom, #636363 0%, #111111 100%)",
+					"name": "Gris oscuro a ébano"
 				},
 				{
 					"slug": "gradient-6",
-					"gradient": "linear-gradient(to bottom, #111111 0%, #353535 100%)",
-					"name": "Vertical ebony to sable"
+					"gradient": "linear-gradient(to bottom, #f39e1c 0%, #dac076 100%)",
+					"name": "Naranja brillante a Beige dorado"
 				},
 				{
 					"slug": "gradient-7",
-					"gradient": "linear-gradient(to bottom, #dbab88 50%, #f6decd 50%)",
-					"name": "Vertical hard beige to linen"
+					"gradient": "linear-gradient(to bottom, #dac076 0%, #ffffff 100%)",
+					"name": "Beige dorado a blanco"
 				},
 				{
 					"slug": "gradient-8",
-					"gradient": "linear-gradient(to bottom, #A4A4A4 50%, #dbab88 50%)",
-					"name": "Vertical hard taupe to beige"
+					"gradient": "linear-gradient(to bottom, #111111 0%, #ffffff 100%)",
+					"name": "Ébano a blanco"
 				},
 				{
 					"slug": "gradient-9",
-					"gradient": "linear-gradient(to bottom, #353535 50%, #dbab88 50%)",
-					"name": "Vertical hard sable to beige"
+					"gradient": "linear-gradient(to bottom, #636363 0%, #ffffff 100%)",
+					"name": "Gris oscuro a blanco"
 				},
 				{
 					"slug": "gradient-10",
-					"gradient": "linear-gradient(to bottom, #111111 50%, #dbab88 50%)",
-					"name": "Vertical hard ebony to beige"
-				},
-				{
-					"slug": "gradient-11",
-					"gradient": "linear-gradient(to bottom, #353535 50%, #A4A4A4 50%)",
-					"name": "Vertical hard sable to taupe"
-				},
-				{
-					"slug": "gradient-12",
-					"gradient": "linear-gradient(to bottom, #111111 50%, #353535 50%)",
-					"name": "Vertical hard ebony to sable"
+					"gradient": "linear-gradient(to bottom, #A4A4A4 0%, #ffffff 100%)",
+					"name": "Gris medio a blanco"
 				}
+
 			],
 			"palette": [
 				{
@@ -115,7 +102,7 @@
 					"slug": "base"
 				},
 				{
-					"color": "#f9f9f9",
+					"color": "#f9f8ec",
 					"name": "Base / Two",
 					"slug": "base-2"
 				},
