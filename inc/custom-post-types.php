@@ -1,25 +1,26 @@
 <?php
 // Archivo: custom-post-types.php
-// Descripción: Registro de Custom Post Types para Esferas y Tejedores.
+// Descripción: Registro de Custom Post Types para Esfera y Tejedores.
 
-function registrar_cpts_personalizados() {
-    // CPT para "Esferas"
-    register_post_type('esferas', array(
+function registrar_cpts_personalizados()
+{
+    // CPT para "Esfera"
+    register_post_type('esfera', array(
         'labels' => array(
-            'name' => __('Esferas', 'textdomain'),
+            'name' => __('Esfera', 'textdomain'),
             'singular_name' => __('Esfera', 'textdomain'),
             'add_new' => __('Añadir nueva Esfera', 'textdomain'),
-            'add_new_item' => __('Añadir nueva entrada para Esferas', 'textdomain'),
-            'edit_item' => __('Editar entrada para Esferas', 'textdomain'),
-            'new_item' => __('Nueva entrada para Esferas', 'textdomain'),
-            'view_item' => __('Ver entrada para Esferas', 'textdomain'),
-            'search_items' => __('Buscar en Esferas', 'textdomain'),
-            'not_found' => __('No se encontraron entradas para Esferas', 'textdomain'),
-            'menu_name' => __('Esferas', 'textdomain'),
+            'add_new_item' => __('Añadir nueva entrada para Esfera', 'textdomain'),
+            'edit_item' => __('Editar entrada para Esfera', 'textdomain'),
+            'new_item' => __('Nueva entrada para Esfera', 'textdomain'),
+            'view_item' => __('Ver entrada para Esfera', 'textdomain'),
+            'search_items' => __('Buscar en Esfera', 'textdomain'),
+            'not_found' => __('No se encontraron entradas para Esfera', 'textdomain'),
+            'menu_name' => __('Esfera', 'textdomain'),
         ),
         'public' => true,
         'has_archive' => true,
-        'rewrite' => array('slug' => 'esferas'),
+        'rewrite' => array('slug' => 'esfera'),
         'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
         'show_in_rest' => true, // Habilita el editor de bloques
     ));
