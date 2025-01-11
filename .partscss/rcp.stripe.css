@@ -1,0 +1,15 @@
+/* ================================
+   Stripe
+   ================================ */
+
+.StripeElement--focus {
+    border-color: #aaa
+}
+
+.StripeElement--invalid {
+    border-color: #b01000
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important
+}

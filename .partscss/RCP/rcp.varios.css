@@ -1,0 +1,25 @@
+/* ================================
+   Discount
+   ================================ */
+
+.rcp_discount_valid {
+    color: #42961e
+}
+
+.rcp_discount_invalid {
+    color: #b01000
+}
+
+/* ================================
+   Summary
+   ================================ */
+
+
+#order_summary .rcp-ppe-confirm-price {
+    text-align: right;
+    width: 70px
+}
+
+#order_summary tfoot th {
+    text-align: right
+}

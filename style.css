@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  Theme Name: Twenty Twenty-Four Child
  Theme URI: https://esferas.vilapps.es/
@@ -7,298 +8,581 @@
  Template: twentytwentyfour
  Version: 1.0.0
 */
-
-/* ===================
-   ESTILOS GENERALES
-   =================== */
-
-html, body {
-    height: 100%;
-    margin: 0;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
 }
 
 .wp-site-blocks {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 main.wp-block-group {
-    flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 footer.wp-block-template-part {
-    margin-top: auto !important;
+  margin-top: auto !important;
 }
 
-/* ================================
-   FORMULARIOS Y CAMPOS DE ENTRADA
-   ================================ */
-
-/* Estilo general para formularios y fieldsets */
-form, fieldset {
-    border: none;
-    margin: 20px 0 !important; /* Margen superior e inferior */
-    padding: 0;
-    font-family: inherit; /* Heredar la fuente del tema */
-    color: inherit; /* Heredar color del texto del tema */
+/* ===================
+   TABS
+   =================== */
+/* Estilo base para las pestañas */
+.responsive-tabs {
+  width: 100%; /* Asegura que el contenedor de pestañas ocupe todo el ancho */
 }
 
-/* Estilo del encabezado de fieldsets */
-fieldset legend {
-    font-size: 18px;
-    font-weight: bold;
-    color: #111111; /* Ébano */
-    margin-bottom: 10px;
-    display: block;
-}
-
-/* Campos de entrada y áreas de texto */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea {
-    width: 100%;
-    max-width: 500px;
-    height: 40px;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #e4b44b; /* Oro cálido */
-    border-radius: 5px;
-    background-color: #f9f8ec; /* Beige suave */
-    font-size: 16px;
-    color: #111111; /* Ébano */
-    box-sizing: border-box;
-}
-
-textarea {
-    height: auto; /* Permite que el área de texto crezca con el contenido */
-    min-height: 40px; /* Asegura una altura mínima uniforme */
-}
-
-/* Efecto focus en campos */
-input:focus, textarea:focus {
-    outline: none;
-    border-color: #f39e1c; /* Naranja brillante */
-    box-shadow: 0 0 5px rgba(243, 158, 28, 0.5);
-}
-
-/* ====================
-   SELECTORES DESPLEGABLES
-   ==================== */
-
-   select {
-    width: 100%; /* Asegurar que ocupe todo el ancho disponible */
-    max-width: 400px; /* Limitar el ancho máximo */
-    height: 40px; /* Altura consistente */
-    padding: 5px 10px; /* Espaciado interno */
-    border: 1px solid #e4b44b; /* Borde dorado */
-    border-radius: 5px; /* Bordes redondeados */
-    background-color: #f9f8ec; /* Fondo beige claro */
-    font-size: 16px; /* Tamaño de texto legible */
-    color: #111111; /* Texto negro */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    appearance: none; /* Elimina los estilos por defecto del navegador */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%23111111' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E"); /* Ícono de flecha personalizada */
-    background-repeat: no-repeat; /* No repetir el ícono */
-    background-position: right 10px center; /* Posición del ícono */
-    background-size: 10px 6px; /* Tamaño del ícono */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
-}
-
-select:focus {
-    outline: none; /* Quitar el contorno predeterminado */
-    border-color: #f39e1c; /* Borde naranja brillante */
-    box-shadow: 0 0 5px rgba(243, 158, 28, 0.5); /* Sombra más visible */
-}
-
-select option {
-    font-size: 16px; /* Tamaño de texto consistente */
-    color: #111111; /* Texto negro */
-    background-color: #ffffff; /* Fondo blanco */
-}
-
-/* Asegura que las etiquetas también estén alineadas visualmente */
-label {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px; /* Espaciado entre etiqueta y selector */
-    display: block;
-    color: #111111; /* Texto negro */
-}
-
-/* ================================
-   TABLAS (DETALLES DE SUSCRIPCIÓN)
-   ================================ */
-
-/* Estilo base para tablas */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-/* Cabeceras de las tablas */
-table th {
-    text-align: left;
-    font-size: 1.2rem;
-    color: #111111;
-    padding: 10px;
-    border-bottom: 2px solid #e4b44b; /* Línea dorada */
-}
-
-/* Celdas de las tablas */
-table td {
-    padding: 10px;
-    font-size: 1rem;
-    color: #444444; /* Gris oscuro */
-}
-
-/* Filas de totales */
-table .rcp-total td {
-    font-weight: bold;
-    color: #111111;
-}
-
-/* ================================
-   BOTÓN DE REGISTRO
-   ================================ */
-
-/* Botón de registro */
-form input[type="submit"] {
-    background-color: #f39e1c; /* Naranja brillante */
-    color: #ffffff; /* Blanco */
-    font-size: 1.2rem; /* Tamaño del texto */
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-
-form input[type="submit"]:hover {
-    background-color: #e4b44b; /* Dorado brillante */
+.responsive-tabs__panel {
+  width: 100%; /* Ajusta el ancho al 100% */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* Asegura que el padding no exceda el ancho */
+  padding: 20px; /* Añade espacio interno si es necesario */
 }
 
 /* ===================
    MENÚ PRINCIPAL
    =================== */
-
 /* Estilo base para los enlaces del menú */
 .wp-block-navigation a {
-    position: relative; /* Necesario para el subrayado animado */
-    color: inherit; /* Mantiene el color definido por el tema */
-    text-decoration: none; /* Sin subrayado inicial */
-    transition: color 0.3s ease-in-out; /* Transición suave para el color */
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease-in-out ease;
+  transition: color 0.3s ease-in-out ease;
 }
-
-/* Subrayado animado (inicialmente invisible) */
 .wp-block-navigation a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px; /* Espaciado bajo el texto */
-    width: 0; /* Ancho inicial del subrayado */
-    height: 2px; /* Grosor del subrayado */
-    background-color: #f39e1c; /* Naranja brillante */
-    transition: width 0.3s ease-in-out; /* Animación de extensión */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--wp--preset--color--accent-5, #f39e1c);
+  -webkit-transition: width 0.3s ease-in-out ease;
+  transition: width 0.3s ease-in-out ease;
 }
-
-/* Efecto hover en enlaces del menú */
 .wp-block-navigation a:hover {
-    color: #f39e1c; /* Cambia el color del texto a naranja brillante */
+  color: var(--wp--preset--color--accent-5, #f39e1c);
 }
-
 .wp-block-navigation a:hover::after {
-    width: 100%; /* Expande el subrayado completamente */
+  width: 100%;
 }
 
 /* ===================
    SUBMENÚ
    =================== */
-
-/* Configuración del contenedor del submenú */
 .wp-block-navigation__submenu-container {
-    position: absolute; /* Posición absoluta */
-    top: 110% !important; /* Posicionar directamente debajo del elemento principal */
-    left: 0;
-    padding: 0; /* Sin padding interno en el contenedor */
-    background-color: #ffffff; /* Fondo blanco */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    border-radius: 4px; /* Bordes redondeados */
-    z-index: 1000; /* Asegurar que se muestre encima */
-    display: none; /* Ocultar inicialmente */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Animación suave */
-    opacity: 0;
-    transform: translateY(-10px); /* Animación de entrada */
-    overflow: visible; /* Permitir que el subrayado sea visible */
+  position: absolute;
+  top: 110% !important;
+  left: 0;
+  padding: 0;
+  background-color: var(--wp--preset--color--base, #f9f9f9);
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+  display: none;
+  -webkit-transition: opacity 0.3s ease-in-out transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out transform 0.3s ease-in-out;
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  overflow: visible;
 }
-
-/* Mostrar el submenú al pasar el ratón */
-.wp-block-navigation-item:hover > .wp-block-navigation__submenu-container {
-    display: block;
-    opacity: 1;
-    transform: translateY(0); /* Aparece suavemente */
+.wp-block-navigation-item:hover .wp-block-navigation__submenu-container {
+  display: block;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
-
-/* Estilo para los enlaces del submenú */
 .wp-block-navigation__submenu-container a {
-    display: block;
-    padding: 10px 15px; /* Espaciado interno para cada enlace */
-    color: #111111; /* Texto negro */
-    text-decoration: none; /* Sin subrayado inicial */
-    position: relative; /* Necesario para el subrayado animado */
-    z-index: 1100; /* Asegurar que los enlaces estén sobre la caja */
-    transition: color 0.3s ease-in-out; /* Transición suave para el color */
+  display: block;
+  padding: 10px 15px;
+  color: var(--wp--preset--color--contrast, #111111);
+  text-decoration: none;
+  position: relative;
+  z-index: 1100;
+  -webkit-transition: color 0.3s ease-in-out ease;
+  transition: color 0.3s ease-in-out ease;
 }
-
-/* Hover para los enlaces con subrayado animado */
 .wp-block-navigation__submenu-container a::after {
-    content: "";
-    display: block;
-    height: 2px; /* Grosor del subrayado */
-    background-color: #f39e1c; /* Naranja brillante */
-    width: 0; /* Ancho inicial del subrayado */
-    transition: width 0.3s ease-in-out; /* Animación del subrayado */
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: var(--wp--preset--color--accent-5, #f39e1c);
+  width: 0;
+  -webkit-transition: width 0.3s ease-in-out ease;
+  transition: width 0.3s ease-in-out ease;
 }
-
 .wp-block-navigation__submenu-container a:hover {
-    color: #f39e1c; /* Cambia el texto a naranja brillante */
+  color: var(--wp--preset--color--accent-5, #f39e1c);
 }
-
 .wp-block-navigation__submenu-container a:hover::after {
-    width: 100%; /* Expande el subrayado completamente */
+  width: 100%;
 }
-
-/* Button Cuenta */
-header .wp-block-button__link {
-    transition: background-color 0.3s ease, color 0.3s ease; /* Animación suave */
-    font-size: 16px;
-    padding: 0;
-}
-
-header .wp-block-button__link:hover {
-    background-color: #ffffff !important; 
-    color: #f39e1c !important; 
-}
-
 
 /* ===================
-   TABS
+   BOTÓN CUENTA
    =================== */
-
-/* Estilo base para las pestañas */
-.responsive-tabs .responsive-tabs__panel {
-    width: fit-content;
-    min-width: 100%;
+header .wp-block-button__link {
+  -webkit-transition: background-color 0.3s ease color 0.3s ease;
+  transition: background-color 0.3s ease color 0.3s ease;
+  font-size: var(--wp--preset--font-size--medium, 16px);
+  padding: 0;
+}
+header .wp-block-button__link:hover {
+  background-color: var(--wp--preset--color--base, #f9f9f9) !important;
+  color: var(--wp--preset--color--accent-5, #f39e1c) !important;
 }
 
+/* ================================
+   FORMULARIOS Y CAMPOS DE ENTRADA
+   ================================ */
+#rcp_submit_wrap input[type=submit] {
+  padding: 0.9rem 2rem;
+  background-color: var(--wp--preset--color--accent-5, #f39e1c);
+  color: var(--wp--preset--color--base, #f9f9f9);
+  border: none;
+  border-radius: 50px;
+  font-size: var(--wp--preset--font-size--medium, 16px);
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#rcp_submit_wrap input[type=submit]:hover {
+  background-color: #d1830b;
+}
+#rcp_submit_wrap input[type=submit]:focus {
+  border-color: #f39e1c;
+  -webkit-box-shadow: 0 0 3px rgba(243, 158, 28, 0.5);
+          box-shadow: 0 0 3px rgba(243, 158, 28, 0.5);
+}
+
+#rcp_registration_form {
+  padding: 5px;
+}
+
+.rcp_form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.rcp_form label {
+  display: block;
+  cursor: pointer;
+  font-size: max(var(--wp--preset--font-size--small, 0.8rem), var(--wp--preset--font-size--medium, 16px));
+}
+.rcp_form .rcp_gateway_option_label {
+  display: inline-block;
+  margin-right: 10px;
+}
+.rcp_form input.required {
+  color: var(--wp--preset--color--contrast, #111111);
+}
+.rcp_form p {
+  margin: 10px 0;
+  min-height: 20px;
+}
+.rcp_form p br {
+  display: none;
+}
+.rcp_form ul {
+  margin: 0 0 15px;
+  padding: 0;
+}
+.rcp_form ul li {
+  list-style: none;
+  margin: 0 0 15px;
+}
+.rcp_form #rcp_auto_renew_wrap {
+  min-height: 30px;
+}
+.rcp_form input[type=checkbox] {
+  float: left;
+  margin: 0 8px 0 0;
+}
+
+/* ================================
+     Subscription Level
+     ================================ */
+.rcp_message {
+  margin: 0 0 15px;
+}
+
+.rcp_level_description {
+  border-left: 1px solid var(--wp--preset--color--contrast-3, #a4a4a4);
+  padding-left: 8px;
+  font-size: var(--wp--preset--font-size--small, 12px);
+}
+
+.rcp_subscription_message {
+  font-weight: 700;
+}
+
+/* ================================
+   Checked
+   ================================ */
+#rcp_agree_to_privacy_policy_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+#rcp_agree_to_privacy_policy_wrap input[type=checkbox] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--wp--preset--color--contrast-2, #636363);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  /* Estado hover */
+  /* Estado seleccionado */
+}
+#rcp_agree_to_privacy_policy_wrap input[type=checkbox]:hover {
+  border-color: var(--wp--preset--color--accent-5, #f39e1c);
+}
+#rcp_agree_to_privacy_policy_wrap input[type=checkbox]:checked {
+  background-color: var(--wp--preset--color--accent-5, #f39e1c);
+  border-color: var(--wp--preset--color--accent-5, #f39e1c);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px;
+}
+#rcp_agree_to_privacy_policy_wrap label {
+  font-size: var(--wp--preset--font-size--medium, 16px);
+  color: var(--wp--preset--color--contrast, #111111);
+  cursor: pointer;
+}
+
+/* ================================
+   Radio Buttons
+   ================================ */
+.rcp_subscription_level input[type=radio] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--wp--preset--color--accent-5, #f39e1c);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-box-shadow: 0 0 0 3px var(--wp--preset--color--base, #f9f9f9) inset;
+          box-shadow: 0 0 0 3px var(--wp--preset--color--base, #f9f9f9) inset;
+  -webkit-transition: border-color background-color box-shadow;
+  transition: border-color background-color box-shadow;
+}
+.rcp_subscription_level input[type=radio]:checked {
+  background-color: var(--wp--preset--color--accent-5, #f39e1c);
+  border-color: var(--wp--preset--color--accent-5, #f39e1c);
+  -webkit-box-shadow: 0 0 0 4px var(--wp--preset--color--base, #f9f9f9) inset;
+          box-shadow: 0 0 0 4px var(--wp--preset--color--base, #f9f9f9) inset;
+}
+.rcp_subscription_level label {
+  width: auto;
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+  font-size: var(--wp--preset--font-size--medium, 16px);
+  color: var(--wp--preset--color--contrast, #111111);
+}
+.rcp_subscription_level label .rcp_subscription_level_name,
+.rcp_subscription_level label .rcp_price,
+.rcp_subscription_level label .rcp_level_duration {
+  display: inline-block;
+  margin-right: 5px;
+}
+.rcp_subscription_level label .rcp_level_description {
+  font-size: var(--wp--preset--font-size--small, 0.8rem);
+  color: var(--wp--preset--color--contrast, #111111);
+  margin-top: 5px;
+}
+.rcp_subscription_level .rcp_level {
+  float: left;
+  margin: 5px 10px 0 0;
+}
+
+/* ================================
+   User Login
+   ================================ */
+.rcp_user_fieldset {
+  margin-bottom: 20px;
+}
+.rcp_user_fieldset label {
+  color: #6e7a86;
+  display: block;
+  margin-bottom: 5px;
+}
+.rcp_user_fieldset input {
+  font-size: large;
+  background: #ffffff;
+  border: 2px solid #d5d5d5;
+  border-radius: 100px;
+  padding: 17px 15px;
+  width: 100%;
+  max-width: 100%;
+  outline: none;
+  -webkit-transition: border-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+.rcp_user_fieldset input:focus, .rcp_user_fieldset input:hover {
+  border-color: var(--wp--preset--color--accent-5, #f39e1c);
+  background: var(--wp--preset--color--base, #f9f9f9);
+  -webkit-box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+          box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+.rcp_user_fieldset input:disabled {
+  background: var(--wp--preset--color--base, #f9f9f9);
+  border-color: #e4e4e4;
+  color: #a4a4a4;
+}
+
+/* ================================
+     Table
+     ================================ */
+.rcp-table {
+  width: 100%;
+}
+.rcp-table a button {
+  white-space: nowrap;
+  margin-block: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+.rcp-table thead tr td {
+  font-weight: 700;
+}
+.rcp-table #rcp-account-overview td,
+.rcp-table #rcp-account-overview th,
+.rcp-table #rcp-payment-history td,
+.rcp-table #rcp-payment-history th {
+  vertical-align: top;
+  padding-inline: 20px;
+  text-align: left;
+}
+@media screen and (max-width: 900px) {
+  .rcp-table tbody {
+    display: block;
+  }
+  .rcp-table tr {
+    display: block;
+  }
+  .rcp-table tr td:before {
+    margin-bottom: 3px;
+    content: attr(data-title);
+    min-width: 98px;
+    font-size: 1rem;
+    line-height: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+  }
+  .rcp-table td {
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+
+/* ================================
+     Registration Form
+     ================================ */
+.rcp_registration_total_details .membership-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.rcp_registration_total_details .membership-amount p {
+  font-weight: 700;
+}
+.rcp_registration_total_details tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  border-bottom: 1px solid var(--wp--preset--color--contrast, #222);
+  padding-block: 10px;
+}
+.rcp_registration_total_details .discounts-fees {
+  font-weight: 700;
+}
+
+.rcp-renewal-date p,
+.rcp-total p {
+  font-weight: 700;
+}
+
+.membership-level-price div,
+.rcp-fee div {
+  margin-left: 10px;
+}
+
+p.rcp_error {
+  border-radius: 5px;
+  border: 1px solid var(--wp--preset--color--vivid-red, #cf2e2e);
+  margin: 0 0 10px;
+  padding: 4px;
+  background: #ffebe8;
+  color: var(--wp--preset--color--contrast, #111111);
+}
+p.rcp_error span {
+  margin: 0 !important;
+  padding: 10px;
+}
+
+p.rcp_success {
+  border-radius: 5px;
+  border: 1px solid var(--wp--preset--color--luminous-vivid-amber, #fcb900);
+  margin: 0 0 10px;
+  padding: 4px;
+  background: var(--wp--preset--color--base, #f9f9f9);
+  color: var(--wp--preset--color--contrast, #111111);
+}
+p.rcp_success span {
+  margin: 0 !important;
+  padding: 10px;
+}
+
+.rcp_gateway_braintree_fields .rcp_braintree_billing_info input[type=text] {
+  width: 30%;
+}
+
+/* ================================
+   Cards
+   ================================ */
+.rcp_current_cards_fieldset span {
+  display: block;
+}
+
+div#rcp_card_name_wrap, div#rcp_card_wrap {
+  margin-bottom: 10px;
+}
+
+.rcp-recurring-total td {
+  border-top: none;
+}
+
+#rcp-card-element-errors:not(:empty) {
+  margin-top: 10px;
+}
+
+span.rcp-gateway-saved-card-brand {
+  text-transform: capitalize;
+}
+
+/* ================================
+   Sandbox Gateway Test Cards
+   ================================ */
+#rcp-sandbox-gateway-test-cards {
+  background: var(--wp--preset--color--base, #f9f9f9);
+  margin: 0 0 1.5em;
+  padding: 1em;
+}
+
+/* ================================
+   Group members y Group accounts
+   ================================ */
+.group-members-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.group-members-section ul {
+  margin: 0;
+  padding: 0;
+}
+
+.group-members-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-block: 10px;
+}
+
+#rcpga-members-search-input {
+  width: unset;
+}
+
+.group-accounts-table {
+  border: 2px solid var(--wp--preset--color--accent, #e4b44b);
+  text-align: left;
+  border-collapse: collapse;
+}
+.group-accounts-table thead {
+  background: #fffefc;
+}
+.group-accounts-table td,
+.group-accounts-table th {
+  padding: 0.8em 1em;
+}
+
+@media screen and (max-width: 630px) {
+  .group-accounts-table td,
+  .group-accounts-table th {
+    padding: 0.8em 0 0.8em 1em;
+  }
+  .group-members-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 10px;
+  }
+}

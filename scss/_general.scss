@@ -1,0 +1,40 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wp-site-blocks {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+main.wp-block-group {
+  flex: 1;
+}
+
+footer.wp-block-template-part {
+  margin-top: auto !important;
+}
+
+/* ===================
+   TABS
+   =================== */
+
+/* Estilo base para las pestañas */
+.responsive-tabs {
+  width: 100%; /* Asegura que el contenedor de pestañas ocupe todo el ancho */
+}
+
+.responsive-tabs__panel {
+  width: 100%; /* Ajusta el ancho al 100% */
+  box-sizing: border-box; /* Asegura que el padding no exceda el ancho */
+  padding: 20px; /* Añade espacio interno si es necesario */
+}

@@ -1,0 +1,57 @@
+.rcp_subscription_level label {
+    width: auto;
+    display: inline-block;
+}
+
+.rcp_subscription_level .rcp_level {
+    float: left;
+    margin: 5px 10px 0 0;
+}
+
+.rcp_level_description {
+    border-left: 1px solid #f0f0f0;
+    padding-left: 8px;
+    font-size: 12px;
+}
+
+.rcp_subscription_message {
+    font-weight: bold;
+}
+
+
+.rcp_message {
+    margin: 0 0 15px;
+}
+
+.rcp_discount_valid {
+    color: #42961e;
+}
+
+.rcp_discount_invalid {
+    color: #b01000;
+}
+
+.rcp_registration_total_details .membership-amount {
+    display: flex;
+}
+
+.rcp_registration_total_details .membership-amount p {
+    font-weight: bold;
+}
+
+.rcp_registration_total_details tr {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    max-width: 100%;
+    border-bottom: 1px solid #222222;
+    padding-block: 10px;
+}
+
+.rcp_registration_total_details .discounts-fees {
+    font-weight: bold;
+}
+
+#rcp_registration_form .rcp_gateway_braintree_fields .rcp_braintree_billing_info input[type="text"] {
+    width: 30%;
+}

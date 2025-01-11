@@ -1,0 +1,55 @@
+/* ================================
+   Group members y Group accounts
+   ================================ */
+
+.group-members-section {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.group-members-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 10px;
+}
+
+#rcpga-members-search-input {
+    width: unset;
+}
+
+.group-accounts-table {
+    border: 2px solid $secondary-color;
+    text-align: left;
+    border-collapse: collapse;
+
+    thead {
+        background: lighten($secondary-color-hex, 40%);
+    }
+
+    td,
+    th {
+        padding: 0.8em 1em;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .group-accounts-table {
+        td,
+        th {
+            padding: 0.8em 0 0.8em 1em;
+        }
+    }
+
+    .group-members-header {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

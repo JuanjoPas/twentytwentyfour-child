@@ -1,0 +1,29 @@
+.rcp_current_cards_fieldset span {
+    display: block;
+}
+
+div#rcp_card_name_wrap,
+div#rcp_card_wrap {
+    margin-bottom: 10px;
+}
+
+#rcp-card-element-errors:not(:empty) {
+    margin-top: 10px;
+}
+
+span.rcp-gateway-saved-card-brand {
+    text-transform: capitalize;
+}
+
+
+.StripeElement--focus {
+    border-color: #aaa;
+}
+
+.StripeElement--invalid {
+    border-color: #b01000;
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}

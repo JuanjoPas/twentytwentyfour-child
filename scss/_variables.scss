@@ -1,0 +1,42 @@
+$primary-color: var(--wp--preset--color--accent-5, #f39e1c);
+$primary-color-hex: #f39e1c;
+$secondary-color: var(--wp--preset--color--accent, #e4b44b);
+$secondary-color-hex: #e4b44b;
+$error-color: var(--wp--preset--color--vivid-red, #cf2e2e);
+$error-color-hex: #cf2e2e;
+$success-color: var(--wp--preset--color--luminous-vivid-amber, #fcb900);
+$success-color-hex: #fcb900;
+$text-color: var(--wp--preset--color--contrast, #111111);
+$text-color-hex: #111111;
+$label-color: #6e7a86;
+$background-light: var(--wp--preset--color--base, #f9f9f9);
+$background-light-hex: #f9f9f9;
+$border-radius: 5px;
+$font-size-small: var(--wp--preset--font-size--small, 0.8rem);
+$font-size-small-rem: 0.8rem;
+$font-size-medium: var(--wp--preset--font-size--medium, 16px);
+$font-size-medium-px: 16px;
+
+@mixin transition($duration: 0.3s, $timing-function: ease, $properties...) {
+    transition: $properties $duration $timing-function;
+}
+
+@mixin focus-style($color) {
+    border-color: $color;
+    box-shadow: 0 0 3px rgba($color, 0.5);
+}
+
+@mixin modal-position {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+@mixin modal-header($bg-color, $padding-horizontal: 36px, $padding-vertical: 12px) {
+    background: $bg-color;
+    padding: $padding-vertical $padding-horizontal;
+    position: relative;
+    text-align: center;
+}

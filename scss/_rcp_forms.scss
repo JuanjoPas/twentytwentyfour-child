@@ -1,0 +1,366 @@
+/* ================================
+   FORMULARIOS Y CAMPOS DE ENTRADA
+   ================================ */
+#rcp_submit_wrap {
+  input[type="submit"] {
+    padding: 0.9rem 2rem; // Ajusta el espacio interno
+    background-color: $primary-color; // Variable para el color primario
+    color: $background-light; // Color del texto
+    border: none; // Sin bordes
+    border-radius: 50px; // Bordes redondeados
+    font-size: $font-size-medium; // Tamaño de la fuente
+    cursor: pointer;
+    text-align: center;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color-hex, 10%); // Cambia el color al pasar el ratón
+    }
+
+    &:focus {
+      @include focus-style($primary-color-hex); // Aplica el mixin para el efecto focus
+    }
+  }
+}
+
+#rcp_registration_form {
+  padding: 5px;
+}
+
+.rcp_form {
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  label {
+    display: block;
+    cursor: pointer;
+    font-size: max($font-size-small, $font-size-medium);
+  }
+
+  .rcp_gateway_option_label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  input.required {
+    color: $text-color;
+  }
+
+  p {
+    margin: 10px 0;
+    min-height: 20px;
+
+    br {
+      display: none;
+    }
+  }
+
+  ul {
+    margin: 0 0 15px;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin: 0 0 15px;
+    }
+  }
+
+  #rcp_auto_renew_wrap {
+    min-height: 30px;
+  }
+
+  input[type="checkbox"] {
+    float: left;
+    margin: 0 8px 0 0;
+  }
+}
+
+/* ================================
+     Subscription Level
+     ================================ */
+
+.rcp_message {
+  margin: 0 0 15px;
+}
+
+.rcp_level_description {
+  border-left: 1px solid var(--wp--preset--color--contrast-3, #a4a4a4);
+  padding-left: 8px;
+  font-size: var(--wp--preset--font-size--small, 12px);
+}
+
+.rcp_subscription_message {
+  font-weight: 700;
+}
+
+/* ================================
+   Checked
+   ================================ */
+
+#rcp_agree_to_privacy_policy_wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px; // Espaciado entre el checkbox y el label
+
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--wp--preset--color--contrast-2, #636363);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease;
+
+    /* Estado hover */
+    &:hover {
+      border-color: var(--wp--preset--color--accent-5, #f39e1c);
+    }
+
+    /* Estado seleccionado */
+    &:checked {
+      background-color: var(--wp--preset--color--accent-5, #f39e1c);
+      border-color: var(--wp--preset--color--accent-5, #f39e1c);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 18px;
+    }
+  }
+
+  label {
+    font-size: var(--wp--preset--font-size--medium, 16px);
+    color: var(--wp--preset--color--contrast, #111111);
+    cursor: pointer;
+  }
+}
+/* ================================
+   Radio Buttons
+   ================================ */
+
+.rcp_subscription_level {
+  input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $primary-color;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 0 0 0 3px $background-light inset;
+    @include transition(background-color, box-shadow, border-color);
+
+    &:checked {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 4px $background-light inset;
+    }
+  }
+
+  label {
+    width: auto;
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+    font-size: $font-size-medium;
+    color: $text-color;
+
+    .rcp_subscription_level_name,
+    .rcp_price,
+    .rcp_level_duration {
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    .rcp_level_description {
+      font-size: $font-size-small;
+      color: $text-color;
+      margin-top: 5px;
+    }
+  }
+
+  .rcp_level {
+    float: left;
+    margin: 5px 10px 0 0;
+  }
+}
+
+/* ================================
+   User Login
+   ================================ */
+
+.rcp_user_fieldset {
+  margin-bottom: 20px;
+
+  label {
+    color: $label-color; // Color del label
+    display: block; // Asegura que el label esté encima del input
+    margin-bottom: 5px; // Espaciado entre el label y el input
+  }
+
+  input {
+    font-size: large;
+    background: #ffffff; // Fondo blanco
+    border: 2px solid #d5d5d5; // Borde inicial gris claro
+    border-radius: 100px; // Bordes redondeados
+    padding: 17px 15px; // Espaciado interno 10px arriba y abajo, 15px a los lados
+    width: 100%; // Input ocupa todo el ancho del contenedor
+    max-width: 100%; // Máximo ancho no excede el contenedor
+    outline: none; // Sin contorno
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease; // Transiciones suaves
+
+    &:focus,
+    &:hover {
+      border-color: $primary-color; // Borde con el color primario
+      background: $background-light; // Fondo claro en focus
+      box-shadow: 0 0 5px rgba(255, 165, 0, 0.5); // Efecto de brillo naranja
+    }
+
+    &:disabled {
+      background: $background-light; // Fondo claro
+      border-color: #e4e4e4; // Borde gris más tenue
+      color: #a4a4a4; // Texto gris claro
+    }
+  }
+}
+
+/* ================================
+     Table
+     ================================ */
+.rcp-table {
+  width: 100%;
+
+  a {
+    button {
+      white-space: nowrap;
+      margin-block: 5px;
+      cursor: pointer;
+      font-size: 0.8em;
+    }
+  }
+
+  thead tr td {
+    font-weight: 700;
+  }
+
+  #rcp-account-overview td,
+  #rcp-account-overview th,
+  #rcp-payment-history td,
+  #rcp-payment-history th {
+    vertical-align: top;
+    padding-inline: 20px;
+    text-align: left;
+  }
+
+  @media screen and (max-width: 900px) {
+    tbody {
+      display: block;
+    }
+
+    tr {
+      display: block;
+
+      td:before {
+        margin-bottom: 3px;
+        content: attr(data-title);
+        min-width: 98px;
+        font-size: 1rem;
+        line-height: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: block;
+      }
+    }
+
+    td {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+/* ================================
+     Registration Form
+     ================================ */
+.rcp_registration_total_details {
+  .membership-amount {
+    display: flex;
+
+    p {
+      font-weight: 700;
+    }
+  }
+
+  tr {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    border-bottom: 1px solid var(--wp--preset--color--contrast, #222);
+    padding-block: 10px;
+  }
+
+  .discounts-fees {
+    font-weight: 700;
+  }
+}
+
+.rcp-renewal-date p,
+.rcp-total p {
+  font-weight: 700;
+}
+
+.membership-level-price div,
+.rcp-fee div {
+  margin-left: 10px;
+}
+
+p.rcp_error {
+  border-radius: $border-radius;
+  border: 1px solid $error-color;
+  margin: 0 0 10px;
+  padding: 4px;
+  background: #ffebe8;
+  color: $text-color;
+
+  span {
+    margin: 0 !important;
+    padding: 10px;
+  }
+}
+
+p.rcp_success {
+  border-radius: $border-radius;
+  border: 1px solid $success-color;
+  margin: 0 0 10px;
+  padding: 4px;
+  background: $background-light;
+  color: $text-color;
+
+  span {
+    margin: 0 !important;
+    padding: 10px;
+  }
+}
+
+.rcp_gateway_braintree_fields {
+  .rcp_braintree_billing_info {
+    input[type="text"] {
+      width: 30%;
+    }
+  }
+}

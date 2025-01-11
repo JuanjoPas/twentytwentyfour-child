@@ -1,0 +1,8 @@
+@mixin transition($properties...) {
+  transition: $properties 0.3s ease;
+}
+
+@mixin focus-style($color) {
+  border-color: $color;
+  box-shadow: 0 0 3px rgba($color, 0.5);
+}

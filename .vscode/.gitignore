@@ -1,5 +1,6 @@
 # Excluir configuraciones locales de VSCode
 .vscode/
+.partscss
 
 # Archivos temporales y de sistema
 *.log

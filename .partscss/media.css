@@ -1,0 +1,52 @@
+@media screen and (max-width: 900px) {
+
+    #rcp-table-wrapper {
+        margin-inline: 20px;
+    }
+
+    .rcp-table tbody {
+        display: block;
+    }
+
+    .rcp-table tr {
+        display: block;
+    }
+
+    .rcp-table#rcp-account-overview thead th,
+    .rcp-table#rcp-payment-history thead th {
+        display: none;
+    }
+
+    .rcp-table-wrapper .rcp-table tr td:before {
+        margin-bottom: 3px;
+        content: attr(data-title);
+        min-width: 98px;
+        font-size: 1rem;
+        line-height: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+    }
+
+    .rcp-table td {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {}
+
+@media screen and (max-width: 630px) {
+
+    .group-accounts-table th,
+    .group-accounts-table td {
+        padding: .8em 0 .8em 1em;
+    }
+
+    .group-members-header {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

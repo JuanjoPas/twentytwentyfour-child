@@ -1,0 +1,76 @@
+/* ================================
+     Table _rcp_forms.scss
+     ================================ */
+
+
+.rcp-table-wrapper {
+  width: auto;
+  max-width: 1000px !important;
+
+  body.twentytwentytwo-theme & {
+    max-width: 900px;
+  }
+
+  body.twentytwentyone-theme & {
+    max-width: 900px !important;
+  }
+
+  .rcp-table {
+    th,
+    td {
+      border: none;
+    }
+
+    tbody + tbody {
+      border-top: none;
+    }
+
+    tbody tr:hover > td,
+    tbody tr:hover > th,
+    tbody > tr:nth-child(odd) > td,
+    tbody > tr:nth-child(odd) > th {
+      background-color: transparent;
+    }
+  }
+
+  #rcp-account-overview,
+  #rcp-payment-history {
+    width: 100%;
+  }
+}
+
+
+// ================================
+// TABLAS (DETALLES DE SUSCRIPCIÓN) _general.scss
+// ================================
+
+// Estilo base para tablas
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  // Cabeceras de las tablas
+  th {
+      text-align: left;
+      font-size: 1.2rem;
+      color: #111111;
+      padding: 10px;
+      border-bottom: 2px solid #e4b44b; // Línea dorada
+  }
+
+  // Celdas de las tablas
+  td {
+      padding: 10px;
+      font-size: 1rem;
+      color: #444444; // Gris oscuro
+  }
+
+  // Filas de totales
+  &.rcp-total {
+      td {
+          font-weight: bold;
+          color: #111111;
+      }
+  }
+}

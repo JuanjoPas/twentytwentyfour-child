@@ -1,0 +1,535 @@
+/*
+ Theme Name: Twenty Twenty-Four Child
+ Theme URI: https://esferas.vilapps.es/
+ Description: Tema hijo de Twenty Twenty-Four para Esferas de Conciencia Activa
+ Author: Juanjo
+ Author URI: https://vilapps.es/
+ Template: twentytwentyfour
+ Version: 1.0.0
+*/
+
+/* ===================
+   ESTILOS GENERALES
+   =================== */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wp-site-blocks {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+main.wp-block-group {
+    flex: 1;
+}
+
+footer.wp-block-template-part {
+    margin-top: auto !important;
+}
+
+/* ================================
+   FORMULARIOS Y CAMPOS DE ENTRADA
+   ================================ */
+
+/* Estilo general para formularios y fieldsets */
+form,
+fieldset {
+    border: none;
+    margin: 20px 0 !important;
+    padding: 0;
+    font-family: inherit;
+    color: inherit;
+}
+
+/* Encabezados de fieldsets */
+fieldset legend {
+    font-size: var(--wp--preset--font-size--medium, 16px);
+    font-weight: bold;
+    color: var(--wp--preset--color--contrast, #111111);
+    margin-bottom: 10px;
+    display: block;
+}
+
+fieldset p.inline,
+fieldset p.inline-block {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100% !important;
+    margin-right: 0 !important;
+}
+
+/* Campos de entrada y áreas de texto */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 50px;
+    padding: 10px 16px;
+    border: 2px solid var(--wp--preset--color--contrast-3, #A4A4A4);
+    border-radius: 25px !important;
+    background-color: var(--wp--preset--color--base, #ffffff);
+    font-size: var(--wp--preset--font-size--medium, 16px);
+    color: var(--wp--preset--color--contrast, #111111);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto focus */
+input:focus,
+textarea:focus {
+    border-color: var(--wp--preset--color--accent, #e4b44b);
+    box-shadow: 0 0 6px rgba(228, 180, 75, 0.6);
+    outline: none;
+    /* Eliminar borde adicional */
+}
+
+/* Etiquetas de campos */
+label {
+    margin-bottom: 6px;
+    /* Espaciado */
+    font-size: var(--wp--preset--font-size--medium, 16px);
+    font-weight: 600;
+    /* Más peso para claridad */
+    color: var(--wp--preset--color--contrast, #111111);
+}
+
+/* Ajustes específicos para las estructuras */
+#rcp_user_login_wrap,
+#rcp_user_email_wrap,
+#rcp_user_first_wrap,
+#rcp_user_last_wrap,
+#rcp_password_wrap,
+#rcp_password_again_wrap {
+    display: flex;
+    flex-direction: column;
+    /* Alinear elementos en columna */
+    gap: 8px;
+    /* Espaciado entre los elementos */
+    margin-bottom: 15px;
+    /* Separación entre filas */
+    max-width: 100% !important;
+}
+
+/* Inputs en línea */
+fieldset p.inline,
+fieldset p.inline-block {
+    display: inline-flex;
+    flex-direction: column;
+    width: 48%;
+    margin-right: 2%;
+    /* Espaciado entre columnas */
+}
+
+/* Eliminar margen derecho del último input en línea */
+fieldset p.inline-block:last-child {
+    margin-right: 0;
+}
+
+/* Botones de acción (submit, etc.) */
+input[type="submit"],
+button {
+    height: 50px;
+    padding: 0 20px;
+    background-color: var(--wp--preset--color--accent, #e4b44b);
+    color: var(--wp--preset--color--base, #ffffff);
+    border: none;
+    border-radius: 25px;
+    font-size: var(--wp--preset--font-size--medium, 16px);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: var(--wp--preset--color--accent-5, #f39e1c);
+    box-shadow: 0 0 6px rgba(243, 158, 28, 0.6);
+}
+
+
+/* ====================
+   SELECTORES DESPLEGABLES
+   ==================== */
+
+select {
+    width: 100%;
+    /* Asegurar que ocupe todo el ancho disponible */
+    max-width: 400px;
+    /* Limitar el ancho máximo */
+    height: 40px;
+    /* Altura consistente */
+    padding: 5px 10px;
+    /* Espaciado interno */
+    border: 1px solid #e4b44b;
+    /* Borde dorado */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    background-color: #f9f8ec;
+    /* Fondo beige claro */
+    font-size: 16px;
+    /* Tamaño de texto legible */
+    color: #111111;
+    /* Texto negro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    appearance: none;
+    /* Elimina los estilos por defecto del navegador */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%23111111' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+    /* Ícono de flecha personalizada */
+    background-repeat: no-repeat;
+    /* No repetir el ícono */
+    background-position: right 10px center;
+    /* Posición del ícono */
+    background-size: 10px 6px;
+    /* Tamaño del ícono */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Transición suave */
+}
+
+select:focus {
+    outline: none;
+    /* Quitar el contorno predeterminado */
+    border-color: #f39e1c;
+    /* Borde naranja brillante */
+    box-shadow: 0 0 5px rgba(243, 158, 28, 0.5);
+    /* Sombra más visible */
+}
+
+select option {
+    font-size: 16px;
+    /* Tamaño de texto consistente */
+    color: #111111;
+    /* Texto negro */
+    background-color: #ffffff;
+    /* Fondo blanco */
+}
+
+/* Asegura que las etiquetas también estén alineadas visualmente */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    /* Espaciado entre etiqueta y selector */
+    display: block;
+    color: #111111;
+    /* Texto negro */
+}
+
+/* ================================
+   TABLAS (DETALLES DE SUSCRIPCIÓN)
+   ================================ */
+
+/* Estilo base para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Cabeceras de las tablas */
+table th {
+    text-align: left;
+    font-size: 1.2rem;
+    color: #111111;
+    padding: 10px;
+    border-bottom: 2px solid #e4b44b;
+    /* Línea dorada */
+}
+
+/* Celdas de las tablas */
+table td {
+    padding: 10px;
+    font-size: 1rem;
+    color: #444444;
+    /* Gris oscuro */
+}
+
+/* Filas de totales */
+table .rcp-total td {
+    font-weight: bold;
+    color: #111111;
+}
+
+/* ================================
+   BOTÓN DE REGISTRO
+   ================================ */
+
+form input[type="submit"] {
+    background-color: var(--wp--preset--color--accent-5);
+    /* Color de fondo dinámico */
+    color: var(--wp--preset--color--white);
+    /* Color del texto dinámico */
+    font-size: 16px;
+    font-family: "Manrope", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 100px;
+    /* Bordes redondeados */
+    padding: 0 15px;
+    /* Espaciado interno */
+    height: 48px;
+    width: 150px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Efecto suave */
+}
+
+/* Hover */
+form input[type="submit"]:hover {
+    background-color: var(--wp--preset--color--accent-4);
+    /* Cambia a un color dinámico */
+}
+
+/* Active */
+form input[type="submit"]:active {
+    background-color: var(--wp--preset--color--accent-3);
+    /* Otro color dinámico */
+}
+
+/* ================================
+   Forms de Restrict Content Pro
+   ================================ */
+
+.rcp_form input[type=checkbox] {
+    float: left;
+    margin: 2px 8px 0 0 !important;
+}
+
+/* ================================
+        checkbox
+        ================================ */
+
+/* Estilo base del checkbox */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--wp--preset--color--contrast-2, #636363);
+    /* Color base */
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    display: inline-block;
+    vertical-align: middle;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin: 2px 8px 0 0;
+}
+
+/* Estado cuando el checkbox está seleccionado */
+input[type="checkbox"]:checked {
+    background-color: var(--wp--preset--color--accent-5, #f39e1c);
+    /* Naranja */
+    border-color: var(--wp--preset--color--accent-5, #f39e1c);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+}
+
+/* Estado hover cuando no está seleccionado */
+input[type="checkbox"]:hover {
+    border-color: var(--wp--preset--color--accent-5, #f39e1c);
+}
+
+/* ================================
+        radio button
+        ================================ */
+
+/* Estilo base para botones de radio */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--wp--preset--color--accent-5, #f39e1c);
+    /* Borde naranja */
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 0 0 0 3px white inset;
+    /* Anillo blanco interno */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estado seleccionado */
+input[type="radio"]:checked {
+    background-color: var(--wp--preset--color--accent-5, #f39e1c);
+    /* Fondo naranja */
+    border-color: var(--wp--preset--color--accent-5, #f39e1c);
+    box-shadow: 0 0 0 4px white inset;
+    /* Anillo blanco interno más grande */
+}
+
+/* Espaciado entre el botón de radio y el texto */
+input[type="radio"]+label {
+    margin-left: 8px;
+    vertical-align: middle;
+    font-size: var(--wp--preset--font-size--medium, 1rem);
+    color: var(--wp--preset--color--contrast, #111111);
+}
+
+/* ===================
+   MENÚ PRINCIPAL
+   =================== */
+
+/* Estilo base para los enlaces del menú */
+.wp-block-navigation a {
+    position: relative;
+    /* Necesario para el subrayado animado */
+    color: inherit;
+    /* Mantiene el color definido por el tema */
+    text-decoration: none;
+    /* Sin subrayado inicial */
+    transition: color 0.3s ease-in-out;
+    /* Transición suave para el color */
+}
+
+/* Subrayado animado (inicialmente invisible) */
+.wp-block-navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    /* Espaciado bajo el texto */
+    width: 0;
+    /* Ancho inicial del subrayado */
+    height: 2px;
+    /* Grosor del subrayado */
+    background-color: #f39e1c;
+    /* Naranja brillante */
+    transition: width 0.3s ease-in-out;
+    /* Animación de extensión */
+}
+
+/* Efecto hover en enlaces del menú */
+.wp-block-navigation a:hover {
+    color: #f39e1c;
+    /* Cambia el color del texto a naranja brillante */
+}
+
+.wp-block-navigation a:hover::after {
+    width: 100%;
+    /* Expande el subrayado completamente */
+}
+
+/* ===================
+   SUBMENÚ
+   =================== */
+
+/* Configuración del contenedor del submenú */
+.wp-block-navigation__submenu-container {
+    position: absolute;
+    /* Posición absoluta */
+    top: 110% !important;
+    /* Posicionar directamente debajo del elemento principal */
+    left: 0;
+    padding: 0;
+    /* Sin padding interno en el contenedor */
+    background-color: #ffffff;
+    /* Fondo blanco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    z-index: 1000;
+    /* Asegurar que se muestre encima */
+    display: none;
+    /* Ocultar inicialmente */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    /* Animación suave */
+    opacity: 0;
+    transform: translateY(-10px);
+    /* Animación de entrada */
+    overflow: visible;
+    /* Permitir que el subrayado sea visible */
+}
+
+/* Mostrar el submenú al pasar el ratón */
+.wp-block-navigation-item:hover>.wp-block-navigation__submenu-container {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    /* Aparece suavemente */
+}
+
+/* Estilo para los enlaces del submenú */
+.wp-block-navigation__submenu-container a {
+    display: block;
+    padding: 10px 15px;
+    /* Espaciado interno para cada enlace */
+    color: #111111;
+    /* Texto negro */
+    text-decoration: none;
+    /* Sin subrayado inicial */
+    position: relative;
+    /* Necesario para el subrayado animado */
+    z-index: 1100;
+    /* Asegurar que los enlaces estén sobre la caja */
+    transition: color 0.3s ease-in-out;
+    /* Transición suave para el color */
+}
+
+/* Hover para los enlaces con subrayado animado */
+.wp-block-navigation__submenu-container a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    /* Grosor del subrayado */
+    background-color: #f39e1c;
+    /* Naranja brillante */
+    width: 0;
+    /* Ancho inicial del subrayado */
+    transition: width 0.3s ease-in-out;
+    /* Animación del subrayado */
+}
+
+.wp-block-navigation__submenu-container a:hover {
+    color: #f39e1c;
+    /* Cambia el texto a naranja brillante */
+}
+
+.wp-block-navigation__submenu-container a:hover::after {
+    width: 100%;
+    /* Expande el subrayado completamente */
+}
+
+/* Button Cuenta */
+header .wp-block-button__link {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Animación suave */
+    font-size: 16px;
+    padding: 0;
+}
+
+header .wp-block-button__link:hover {
+    background-color: #ffffff !important;
+    color: #f39e1c !important;
+}
+
+
+/* ===================
+   TABS
+   =================== */
+
+/* Estilo base para las pestañas */
+.responsive-tabs .responsive-tabs__panel {
+    width: fit-content;
+    min-width: 100%;
+}

@@ -1,0 +1,102 @@
+/* ===================
+   MENÚ PRINCIPAL
+   =================== */
+
+/* Estilo base para los enlaces del menú */
+.wp-block-navigation {
+    a {
+      position: relative; // Necesario para el subrayado animado
+      color: inherit; // Mantiene el color definido por el tema
+      text-decoration: none; // Sin subrayado inicial
+      @include transition(color 0.3s ease-in-out); // Transición suave para el color
+  
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px; // Espaciado bajo el texto
+        width: 0; // Ancho inicial del subrayado
+        height: 2px; // Grosor del subrayado
+        background-color: $primary-color; // Usando la variable de naranja brillante
+        @include transition(width 0.3s ease-in-out); // Animación de extensión
+      }
+  
+      &:hover {
+        color: $primary-color; // Cambia el color del texto a naranja brillante
+  
+        &::after {
+          width: 100%; // Expande el subrayado completamente
+        }
+      }
+    }
+  }
+  
+  /* ===================
+     SUBMENÚ
+     =================== */
+  
+  .wp-block-navigation__submenu-container {
+    position: absolute; // Posición absoluta
+    top: 110% !important; // Posicionar directamente debajo del elemento principal
+    left: 0;
+    padding: 0; // Sin padding interno en el contenedor
+    background-color: $background-light; // Fondo blanco usando la variable
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Sombra sutil
+    border-radius: $border-radius; // Bordes redondeados
+    z-index: 1000; // Asegurar que se muestre encima
+    display: none; // Ocultar inicialmente
+    @include transition(opacity 0.3s ease-in-out, transform 0.3s ease-in-out); // Animación suave
+    opacity: 0;
+    transform: translateY(-10px); // Animación de entrada
+    overflow: visible; // Permitir que el subrayado sea visible
+  
+    .wp-block-navigation-item:hover & {
+      display: block;
+      opacity: 1;
+      transform: translateY(0); // Aparece suavemente
+    }
+  
+    a {
+      display: block;
+      padding: 10px 15px; // Espaciado interno para cada enlace
+      color: $text-color; // Texto negro
+      text-decoration: none; // Sin subrayado inicial
+      position: relative; // Necesario para el subrayado animado
+      z-index: 1100; // Asegurar que los enlaces estén sobre la caja
+      @include transition(color 0.3s ease-in-out); // Transición suave para el color
+  
+      &::after {
+        content: "";
+        display: block;
+        height: 2px; // Grosor del subrayado
+        background-color: $primary-color; // Naranja brillante
+        width: 0; // Ancho inicial del subrayado
+        @include transition(width 0.3s ease-in-out); // Animación del subrayado
+      }
+  
+      &:hover {
+        color: $primary-color; // Cambia el texto a naranja brillante
+  
+        &::after {
+          width: 100%; // Expande el subrayado completamente
+        }
+      }
+    }
+  }
+  
+  /* ===================
+     BOTÓN CUENTA
+     =================== */
+  header {
+    .wp-block-button__link {
+      @include transition(background-color 0.3s ease, color 0.3s ease); // Animación suave
+      font-size: $font-size-medium;
+      padding: 0;
+  
+      &:hover {
+        background-color: $background-light !important;
+        color: $primary-color !important;
+      }
+    }
+  }
+  

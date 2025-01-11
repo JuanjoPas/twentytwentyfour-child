@@ -1,0 +1,38 @@
+/* ================================
+   Cards
+   ================================ */
+
+.rcp_current_cards_fieldset span {
+    display: block
+}
+
+div#rcp_card_name_wrap,
+div#rcp_card_wrap {
+    margin-bottom: 10px
+}
+
+.rcp-recurring-total td,
+.rcp-total td {
+    border-top: none
+}
+
+#rcp-card-element-errors:not(:empty) {
+    margin-top: 10px
+}
+
+span.rcp-gateway-saved-card-brand {
+    text-transform: capitalize
+}
+
+
+/* ================================
+   Sandbox Gateway Test Cards
+   ================================ */
+
+
+#rcp-sandbox-gateway-test-cards {
+    background: #f4f4f4;
+    margin: 0 0 1.5em;
+    padding: 1em
+}
+

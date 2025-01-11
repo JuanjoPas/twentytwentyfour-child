@@ -1,0 +1,112 @@
+/* Aplica un cursor de puntero a los botones de envío */
+input[type="submit"] {
+    cursor: pointer;
+}
+
+/* Añade un padding de 5px al formulario de registro */
+#rcp_registration_form {
+    padding: 5px;
+}
+
+/* Elimina el borde, margen y padding de los fieldsets dentro de .rcp_form */
+.rcp_form fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hace que las etiquetas dentro de .rcp_form se muestren como bloques y cambia el cursor a puntero */
+.rcp_form label {
+    display: block;
+    cursor: pointer;
+}
+
+/* Muestra las etiquetas de opción de gateway en línea y añade un margen derecho de 10px */
+.rcp_form .rcp_gateway_option_label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Cambia el color del texto de los inputs requeridos a negro */
+.rcp_form input.required {
+    color: #000;
+}
+
+/* Añade un margen inferior de 10px y una altura mínima de 20px a los párrafos dentro de .rcp_form */
+.rcp_form p {
+    margin: 0 0 10px;
+    min-height: 20px;
+}
+
+/* Oculta los saltos de línea dentro de los párrafos de .rcp_form */
+.rcp_form p br {
+    display: none;
+}
+
+/* Elimina el margen y padding de las listas no ordenadas dentro de .rcp_form y añade un margen inferior de 15px */
+.rcp_form ul {
+    margin: 0 0 15px;
+    padding: 0;
+}
+
+/* Elimina el estilo de lista y añade un margen inferior de 15px a los elementos de lista dentro de .rcp_form */
+.rcp_form li {
+    list-style: none;
+    margin: 0 0 15px;
+}
+
+/* Añade una altura mínima de 30px al contenedor de auto renovación dentro de .rcp_form */
+.rcp_form #rcp_auto_renew_wrap {
+    min-height: 30px;
+}
+
+/* Añade padding y elimina el margen de los inputs de texto, contraseña y email dentro de .rcp_form */
+.rcp_form input[type="text"],
+.rcp_form input[type="password"],
+.rcp_form input[type="email"] {
+    padding: 4px 8px;
+    margin: 0;
+}
+
+/* Flota los checkboxes a la izquierda y añade márgenes específicos dentro de .rcp_form */
+.rcp_form input[type="checkbox"] {
+    float: left;
+    margin: 7px 8px 0 0;
+}
+
+/* Cambia el color del borde de los inputs de texto, contraseña y email cuando están enfocados dentro de .rcp_form */
+.rcp_form input[type="text"]:focus,
+.rcp_form input[type="password"]:focus,
+.rcp_form input[type="email"]:focus {
+    border-color: #aaa;
+}
+
+/* Cambia el color del borde y añade sombras a los inputs con errores dentro de .rcp_form */
+.rcp_form input.error,
+.rcp_form input[type="text"]:focus.error,
+.rcp_form input[type="password"]:focus.error,
+.rcp_form input[type="email"]:focus.error {
+    border-color: #ffa5a5;
+    -moz-box-shadow: 0 0 3px #ffbfbf;
+    -webkit-box-shadow: 0 0 3px #ffbfbf;
+    box-shadow: 0 0 3px #ffbfbf;
+}
+
+/* Ajusta el ancho, padding y border-radius de los inputs dentro de fieldsets de usuario en .rcp_form */
+.rcp_form .rcp_user_fieldset input:not([type="checkbox"]):not([type="submit"]) {
+    width: 100%;
+    max-width: 400px;
+    padding-block: 10px;
+    border-radius: 5px;
+}
+
+/* Ajusta el tamaño de fuente de los requisitos de contraseña y etiquetas dentro de .rcp_form */
+#rcp_user_pass_requirements,
+.rcp_form label {
+    font-size: max(.8rem, 16px);
+}
+
+/* Restablece el ancho del input de búsqueda de miembros */
+input#rcpga-members-search-input {
+    width: unset;
+}
