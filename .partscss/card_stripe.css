@@ -1,0 +1,42 @@
+/* Estilo para el span dentro del fieldset de tarjetas actuales */
+.rcp_current_cards_fieldset span {
+    display: block;
+}
+
+/* Estilo para los divs con id rcp_card_name_wrap y rcp_card_wrap */
+div#rcp_card_name_wrap,
+div#rcp_card_wrap {
+    margin-bottom: 10px;
+}
+
+/* Estilo para los errores del elemento de tarjeta que no están vacíos */
+#rcp-card-element-errors:not(:empty) {
+    margin-top: 10px;
+}
+
+/* Estilo para el div con id rcp-sandbox-gateway-test-cards */
+#rcp-sandbox-gateway-test-cards {
+    background: #f4f4f4;
+    margin: 0 0 1.5em;
+    padding: 1em;
+}
+
+/* Estilo para el span con clase rcp-gateway-saved-card-brand */
+span.rcp-gateway-saved-card-brand {
+    text-transform: capitalize;
+}
+
+/* Estilo para el elemento de Stripe cuando está enfocado */
+.StripeElement--focus {
+    border-color: #aaa;
+}
+
+/* Estilo para el elemento de Stripe cuando es inválido */
+.StripeElement--invalid {
+    border-color: #b01000;
+}
+
+/* Estilo para el elemento de Stripe cuando es autofill en Webkit */
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}

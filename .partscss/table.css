@@ -1,0 +1,86 @@
+.rcp-table-wrapper {
+    width: auto;
+    max-width: 1000px !important;
+}
+
+body.twentytwentytwo-theme .wp-container-7 .rcp-table-wrapper {
+    max-width: 900px;
+}
+
+body.twentytwentyone-theme .entry-content .rcp-table-wrapper {
+    max-width: 900px !important;
+}
+
+.rcp-table th,
+body.twentytwentyone-theme .rcp-table td {
+    border: none;
+}
+
+body.hello-elementor .rcp-table tbody+tbody {
+    border-top: none;
+}
+
+body.hello-elementor table tbody>tr:nth-child(odd)>td,
+body.hello-elementor table tbody>tr:nth-child(odd)>th,
+body.hello-elementor table tbody tr:hover>td,
+body.hello-elementor table tbody tr:hover>th {
+    background-color: transparent;
+}
+
+table.rcp-table {
+    width: auto;
+}
+
+.rcp-table#rcp-account-overview,
+.rcp-table#rcp-payment-history {
+    width: 100%;
+}
+
+.rcp-table a button {
+    white-space: nowrap;
+    margin-block: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.rcp-table thead tr td {
+    font-weight: bold;
+}
+
+
+.group-accounts-table {
+    border: 2px solid #edf2f7;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.group-accounts-table thead {
+    background: #f7fafc;
+}
+
+.group-accounts-table th,
+.group-accounts-table td {
+    padding: 0.8em 1em;
+}
+
+.rcp-recurring-total td,
+.rcp-total td {
+    border-top: none;
+}
+
+#order_summary tfoot th {
+    text-align: right;
+}
+#rcp-account-overview th,
+#rcp-payment-history th,
+#rcp-account-overview td,
+#rcp-payment-history td {
+    vertical-align: top;
+    padding-inline: 20px;
+    text-align: left;
+}
+#order_summary .rcp-ppe-confirm-price {
+    text-align: right;
+    width: 70px;
+}
+
